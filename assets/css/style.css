@@ -2346,3 +2346,126 @@ section {
 #footer .credits a {
   color: #a2cce3;
 }
+
+/* =========================
+   CodeAI - Homepage Enhancements
+   (menu / footer contact unchanged)
+   ========================= */
+
+/* Compact list inside icon boxes */
+.icon-box .mini-list {
+  margin: 12px 0 0 0;
+  padding: 0 0 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4f5b62;
+}
+.icon-box .mini-list li { margin-bottom: 6px; }
+
+/* Procedure timeline */
+.procedure .step {
+  display: flex;
+  gap: 14px;
+  padding: 16px 14px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+  margin-bottom: 14px;
+  border: 1px solid rgba(30, 67, 86, 0.08);
+}
+.procedure .step:last-child { margin-bottom: 0; }
+.procedure .step-badge {
+  min-width: 92px;
+  height: 34px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  background: rgba(30, 67, 86, 0.10);
+  color: #1e4356;
+}
+.procedure .step-body h4 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+}
+.procedure .step-body p { margin: 0; }
+
+/* Soft card */
+.card-soft {
+  border: 1px solid rgba(30, 67, 86, 0.10);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+/* CTA band */
+.cta-band {
+  padding: 46px 0;
+  background: linear-gradient(90deg, rgba(30, 67, 86, 0.92), rgba(30, 67, 86, 0.68));
+  color: #fff;
+}
+.cta-band h3 {
+  color: #fff;
+  font-size: 26px;
+  margin: 0 0 6px 0;
+}
+.cta-band p { color: rgba(255,255,255,0.9); }
+
+/* Slightly stronger portfolio hover for gallery */
+.portfolio .portfolio-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+
+/*--------------------------------------------------------------
+# Achievements (Home)
+--------------------------------------------------------------*/
+.achievements .ach-card{
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(30, 67, 86, 0.15);
+  background: #fff;
+}
+.achievements .ach-card img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.achievements .ach-card:hover img{
+  transform: scale(1.03);
+}
+.achievements .ach-caption{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 14px;
+  background: linear-gradient(to top, rgba(30, 67, 86, 0.85), rgba(30, 67, 86, 0));
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Why-us accordion numbers */
+.why-us .accordion-list a span{
+  font-size: 18px;
+  font-weight: 700;
+  color: #68A4C4;
+  margin-right: 10px;
+}
+.why-us .accordion-list a{
+  display: block;
+  position: relative;
+  font-weight: 600;
+  padding: 18px 0 18px 0;
+}
+.why-us .accordion-list li+li{
+  border-top: 1px solid #e6f2fa;
+}

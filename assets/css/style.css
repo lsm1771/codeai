@@ -2469,3 +2469,441 @@ section {
 .why-us .accordion-list li+li{
   border-top: 1px solid #e6f2fa;
 }
+
+
+/* Course detail modules */
+.course-modules {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+}
+.course-modules li {
+  margin: 0.15rem 0;
+}
+
+
+/* --- CODEAI Logo Placement Tweaks --- */
+#header .logo-img img {
+  max-height: 44px;
+}
+
+.hero-logo {
+  width: 150px;
+  max-width: 38vw;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.25));
+}
+
+@media (max-width: 768px) {
+  .hero-logo { width: 120px; margin-bottom: 10px; }
+  #header .logo-img img { max-height: 40px; }
+}
+
+.footer-logo img {
+  max-height: 54px;
+  margin-bottom: 10px;
+}
+
+.footer-brand .footer-tagline {
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+
+
+/* === CodeAI custom: Achievements text cards + thumbnails === */
+.ach-text-card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  height:100%;
+}
+.ach-text-card .ach-top{
+  position:relative;
+  padding:18px 18px 14px 18px;
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+}
+.ach-text-card .ach-top img{
+  width:72px;
+  height:72px;
+  object-fit:cover;
+  border-radius:12px;
+  flex:0 0 auto;
+}
+.ach-text-card .ach-top .ach-title{
+  margin:0;
+  font-size:18px;
+  font-weight:700;
+}
+.ach-text-card .ach-top .ach-sub{
+  margin:4px 0 0 0;
+  font-size:13px;
+  opacity:.75;
+}
+.ach-text-card .ach-body{
+  padding:0 18px 18px 18px;
+}
+.ach-text-card .ach-body ul{
+  margin:0;
+  padding-left:18px;
+}
+.ach-text-card .ach-body li{
+  margin:6px 0;
+  line-height:1.4;
+}
+.ach-text-card .ach-badge{
+  display:inline-block;
+  margin-top:10px;
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(0, 173, 181, 0.12);
+}
+
+/* Ensure Why-us accordion numbers visible */
+.why-us .accordion-list span{
+  font-weight:800;
+  color:#012970;
+  min-width:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(1, 41, 112, 0.08);
+  border-radius:8px;
+  margin-right:10px;
+}
+
+
+/* ===== CodeAI: Goals & Curriculum visual enhancements ===== */
+.goals-visual .visual-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  border:1px solid rgba(0,0,0,0.06);
+}
+.goals-visual .visual-card__media img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.goals-visual .visual-card__body{
+  padding:18px 18px 20px 18px;
+}
+.goals-visual .pill-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:10px;
+}
+.goals-visual .pill{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+  background:rgba(25,119,204,0.10);
+  color:#1977cc;
+}
+
+.goal-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:14px;
+}
+@media (max-width: 991px){
+  .goal-grid{ grid-template-columns:1fr; }
+}
+
+.goal-card{
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:16px;
+  padding:16px;
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  box-shadow:0 6px 18px rgba(0,0,0,0.05);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.goal-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 26px rgba(0,0,0,0.10);
+}
+.goal-card__icon{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(25,119,204,0.12);
+  color:#1977cc;
+  flex:0 0 46px;
+}
+.goal-card__icon i{ font-size:22px; }
+.goal-card__text h4{
+  font-size:16px;
+  margin:0 0 6px 0;
+  font-weight:700;
+}
+.goal-card__text p{
+  margin:0;
+  font-size:13px;
+  color:#6c757d;
+  line-height:1.45;
+}
+
+.goals-note{ margin-top:14px; }
+.goals-note__inner{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:12px 14px;
+  border-radius:14px;
+  background:rgba(0,0,0,0.03);
+  border:1px dashed rgba(0,0,0,0.10);
+  font-size:13px;
+}
+.goals-note__inner i{ color:#1977cc; }
+
+/* Curriculum roadmap */
+.roadmap-card{
+  background:#fff;
+  border-radius:18px;
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  padding:18px;
+}
+.roadmap-card__head{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-bottom:12px;
+}
+.roadmap-title{
+  margin:0;
+  font-size:18px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.roadmap-thumb{
+  display:block;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.08);
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  transition:transform .2s ease;
+}
+.roadmap-thumb:hover{ transform:translateY(-2px); }
+.roadmap-thumb img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  display:block;
+}
+
+/* Course cards: icon + module chips */
+.team .member{ gap:14px; }
+.course-icon{
+  width:56px;
+  height:56px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(25,119,204,0.12);
+  color:#1977cc;
+  flex:0 0 56px;
+}
+.course-icon i{ font-size:24px; }
+
+.course-modules{
+  list-style:none;
+  padding:10px 0 0 0;
+  margin:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.course-modules li{
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  background:rgba(0,0,0,0.04);
+  border:1px solid rgba(0,0,0,0.08);
+}
+
+
+/* Header logo sizing */
+#header .logo-img img{height:44px;width:auto;}
+@media (max-width: 768px){#header .logo-img img{height:38px;}}
+
+/* Footer brand logo a bit bigger */
+#footer .footer-logo img{width:180px;max-width:100%;height:auto;}
+
+
+
+/* === Fix: footer left logo aspect ratio (avoid squish) === */
+#footer .footer-logo img{
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 768px){
+  #footer .footer-logo img{ width: 150px; }
+}
+
+
+
+
+/* === CodeAI: services (문해력코딩이란?) - more graphical === */
+.service-visual{
+  padding: 60px 0;
+  background: linear-gradient(180deg, rgba(4,62,96,0.06) 0%, rgba(4,62,96,0.02) 60%, rgba(255,255,255,0) 100%);
+}
+.service-visual .svc-title{font-weight:800; letter-spacing:-0.02em;}
+.service-visual .svc-lead{font-size:1.05rem; opacity:.9;}
+.service-visual .svc-badges .badge{
+  background: rgba(4,62,96,0.08);
+  color: #1b1b1b;
+  border: 1px solid rgba(4,62,96,0.12);
+  padding: .55rem .9rem;
+  margin-right: .35rem;
+}
+.service-visual .svc-visual-card{
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: #fff;
+}
+.service-visual .svc-visual-caption{
+  padding: 12px 14px;
+  font-size: .95rem;
+  display:flex; align-items:center; gap:.5rem;
+  opacity:.9;
+}
+
+.svc-gallery{padding: 60px 0;}
+.svc-shot{
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+.svc-shot img{width:100%; height: 165px; object-fit: cover; display:block;}
+.svc-shot-cap{padding:12px 12px 14px;}
+.svc-shot-cap strong{display:block; font-size:1rem;}
+.svc-shot-cap span{display:block; opacity:.8; font-size:.92rem;}
+
+.svc-procedure{padding: 60px 0;}
+.step-card{
+  position:relative;
+  background:#fff;
+  border-radius:16px;
+  padding:22px 20px 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  height:100%;
+}
+.step-card .step-num{
+  position:absolute;
+  top:14px;
+  right:16px;
+  font-weight:800;
+  opacity:.22;
+  font-size:1.6rem;
+}
+.step-card .step-ic{
+  width:44px; height:44px;
+  border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  background: rgba(4,62,96,0.08);
+  margin-bottom:12px;
+  font-size: 22px;
+}
+.step-card h4{font-size:1.1rem; margin-bottom:6px; font-weight:700;}
+.step-card p{margin:0; opacity:.85;}
+
+.svc-examples{padding:60px 0;}
+.example-card{
+  background:#fff;
+  border-radius:16px;
+  padding:20px 18px 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  height:100%;
+}
+.example-head{display:flex; gap:10px; align-items:center; margin-bottom:10px;}
+.example-head i{font-size:26px; color:#0b547a;}
+.example-head h4{margin:0; font-weight:800;}
+.example-list{padding-left: 1.1rem; margin: 12px 0 10px;}
+.example-list li{margin:6px 0; opacity:.9;}
+.example-link{display:inline-flex; align-items:center; gap:6px; font-weight:700;}
+
+
+
+/* === CODEAI: footer brand logo (no distortion) === */
+#footer .footer-logo img{
+  width: 210px;
+  max-width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 768px){
+  #footer .footer-logo img{width: 180px; max-height: 120px;}
+}
+
+
+
+/* === CODEAI: Achievements unified cards === */
+.achievements .ach-thumb{display:block; position:relative; background:#f8fbff;}
+.achievements .ach-thumb img{
+  width:100%;
+  height:260px;
+  object-fit:contain;
+  background:#f8fbff;
+  padding:12px;
+  transition:transform .25s ease;
+}
+.achievements .ach-card:hover .ach-thumb img{transform:scale(1.01);}
+.achievements .ach-badge{
+  position:absolute;
+  left:14px;
+  top:14px;
+  background:rgba(10, 30, 45, .78);
+  color:#fff;
+  font-size:13px;
+  padding:6px 10px;
+  border-radius:999px;
+  letter-spacing:.2px;
+}
+.achievements .ach-content{padding:16px 18px 18px;}
+.achievements .ach-content h3{font-size:18px; margin:0 0 10px 0;}
+.achievements .ach-content ul{padding-left:18px; margin:0;}
+@media (max-width: 768px){
+  .achievements .ach-thumb img{height:220px;}
+}
+
+
+/* === CODEAI: Services PPT visuals === */
+.svc-shot--ppt img{
+  height:auto !important;
+  max-height:380px;
+  object-fit:contain !important;
+  background:#ffffff;
+  padding:10px;
+  border-radius:14px;
+}
+@media (max-width: 768px){
+  .svc-shot--ppt img{max-height:320px;}
+}

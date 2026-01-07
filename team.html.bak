@@ -74,6 +74,7 @@
 <div class="roadmap-card">
 <div class="roadmap-card__head">
 <h3 class="roadmap-title"><i class="bi bi-map"></i> 코스 로드맵 한눈에 보기</h3>
+<p class="mb-0 text-muted">PPT의 커리큘럼 표를 그대로 시각 자료로 제공합니다.</p>
 </div>
 <div class="row g-3">
 <div class="col-md-6 col-lg-3">

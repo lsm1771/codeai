@@ -168,7 +168,7 @@
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-wrap',
+        itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
       });
 

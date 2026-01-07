@@ -156,7 +156,9 @@
    코드아이코딩스쿨 – 함께 여는 교육수익 모델</p>
    <div class="d-flex gap-2 flex-wrap">
    <a class="btn btn-primary" href="https://forms.gle/iUnXhVTHiRyG8pnp9" target="_blank" rel="noopener">협력학원 신청하기</a>
+   <a class="btn btn-outline-primary" href="#ppt" style="font-weight:800;">PPT 시각자료 보기</a>
    </div>
+   <p class="small-note mt-3 mb-0">본 페이지의 내용은 업로드하신 제안서(PPT) 내용을 그대로 기반으로 구성되었습니다.</p>
   </div>
 
   <div class="col-lg-6">

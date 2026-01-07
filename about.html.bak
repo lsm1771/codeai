@@ -113,7 +113,6 @@
  <div class="container" data-aos="fade-up">
  <div class="section-title">
   <h2>코드아이 실적</h2>
-  <p>PPT에 기재된 출강/입시/대회·자격증 성과를 한눈에 정리했습니다.</p>
  </div>
 
  <div class="row g-4">
@@ -141,7 +140,7 @@
    <div class="ach-content">
    <h3>입시 실적</h3>
    <ul class="mb-0">
-    <li>한국디지털미디어고등학교: 6명 (60% 합격)</li><li>단국대소프트웨어고등학교: 2명 (50% 합격)</li><li>한국애니메이션고등학교: 2명 (100% 합격)</li>
+    <li>한국디지털미디어고등학교: (60% 합격)</li><li>단국대소프트웨어고등학교: (50% 합격)</li><li>한국애니메이션고등학교: (100% 합격)</li>
    </ul>
    </div>
   </div>
@@ -156,7 +155,7 @@
    <div class="ach-content">
    <h3>대회 및 자격증</h3>
    <ul class="mb-0">
-    <li>한국정보올림피아드: 은상 2명 / 동상 1명</li><li>한국코드페어: 은상 1팀 / 본선 다수팀</li><li>YBM COS(3급/2급), COS Pro(3급/2급) 합격 성과</li>
+    <li>한국정보올림피아드: 은상 2명 / 동상 1명 / 금상 1명</li><li>한국코드페어: 은상 1팀 / 본선 다수팀</li><li>YBM COS(3급/2급), COS Pro(3급/2급) 합격 성과</li>
    </ul>
    </div>
   </div>

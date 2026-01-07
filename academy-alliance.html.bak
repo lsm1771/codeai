@@ -156,9 +156,7 @@
    코드아이코딩스쿨 – 함께 여는 교육수익 모델</p>
    <div class="d-flex gap-2 flex-wrap">
    <a class="btn btn-primary" href="https://forms.gle/iUnXhVTHiRyG8pnp9" target="_blank" rel="noopener">협력학원 신청하기</a>
-   <a class="btn btn-outline-primary" href="#ppt" style="font-weight:800;">PPT 시각자료 보기</a>
    </div>
-   <p class="small-note mt-3 mb-0">본 페이지의 내용은 업로드하신 제안서(PPT) 내용을 그대로 기반으로 구성되었습니다.</p>
   </div>
 
   <div class="col-lg-6">
@@ -276,7 +274,28 @@
 
  </div>
  </section>
+    <!-- ======= Major Partner Academies ======= -->
+    <section class="services section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="section-title">
+          <h2>주요 협력학원</h2>
+          <p>CODEAI는 다양한 교육 파트너와 함께 성장합니다.</p>
+        </div>
 
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card">
+              <div class="partner-logo-wrap">
+                <img src="assets/img/partners/gnpolya_suji.png" alt="개념폴리아 수지관 로고">
+              </div>
+              <div class="partner-name">개념폴리아 수지관</div>
+              <p class="partner-meta">주요 협력학원</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
  <!-- ======= PPT Visuals ======= -->
 
 </main><!-- End #main -->

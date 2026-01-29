@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>강사등록신청</title>
-<meta content="" name="description"/>
-<meta content="" name="keywords"/>
+<title>강사등록신청 | CodeAI</title>
+<meta content="1:1 줌 기반 온라인 코딩·AI 수업. 학생부터 직장인/일반인까지 맞춤 로드맵과 실전 프로젝트, 피드백으로 결과물을 완성합니다." name="description"/>
+<meta content="1:1 줌, 온라인 코딩, 파이썬, AI 활용, 업무자동화, 프로젝트, 포트폴리오, CodeAI" name="keywords"/>
 <!-- Favicons -->
 <link href="assets/img/favicon.png" rel="icon"/>
 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
@@ -143,12 +143,14 @@
 <nav class="navbar" id="navbar">
 <ul>
 <li><a href="index.html">Home</a></li>
+<li><a href="index.html#enroll" class="js-open-enroll-chat">수강신청</a></li>
+<li><a href="index.html#enroll">수강신청</a></li>
 <li><a href="about.html">About</a></li>
-<li><a href="services.html">문해력코딩이란?</a></li>
-<li><a href="portfolio.html">교육목표</a></li>
-<li><a href="team.html">교육과정</a></li>
-<li><a href="contact.html">입학상담</a></li>
-<li><a class="active" href="instructor-apply.html">강사등록신청</a></li><li><a href="academy-alliance.html">협력학원신청</a></li></ul>
+<li><a href="services.html">온라인수업</a></li>
+<li><a href="portfolio.html">수업효과</a></li>
+<li><a href="team.html">커리큘럼</a></li>
+<li><a href="contact.html">수강상담</a></li>
+<li><a class="active" href="instructor-apply.html">강사등록신청</a></li></ul>
 <i class="bi bi-list mobile-nav-toggle"></i>
 </nav><!-- .navbar -->
 </div>
@@ -186,9 +188,6 @@
    <div class="d-flex flex-wrap gap-2">
    <a class="btn btn-primary btn-lg" href="#apply-form">
     <i class="bi bi-send me-1"></i> 지금 신청하기
-   </a>
-   <a class="btn btn-outline-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLScBrNW6TUHtWSUwoeiCsu1XzOa-2iQQtIstKAplQZyo2G_rqw/viewform" target="_blank" rel="noopener">
-    <i class="bi bi-box-arrow-up-right me-1"></i> 구글폼 새창으로 열기
    </a>
    </div>
 
@@ -379,29 +378,128 @@
   <p>아래 폼을 작성해주시면 검토 후 빠른 시간 내에 연락드리겠습니다.</p>
   </div>
 
-  <div class="form-actions mb-3">
-  <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScBrNW6TUHtWSUwoeiCsu1XzOa-2iQQtIstKAplQZyo2G_rqw/viewform" target="_blank" rel="noopener">
-   <i class="bi bi-box-arrow-up-right me-1"></i> 구글폼 새창으로 열기
-  </a>
+  <div class="alert alert-info" role="alert">
+    <b>이 페이지는 이제 채팅으로 신청합니다.</b> 아래 채팅창에서 선택/입력으로 신청해 주세요.
   </div>
 
-  <div class="codeai-form-embed">
-  <iframe
-   src="https://docs.google.com/forms/d/e/1FAIpQLScBrNW6TUHtWSUwoeiCsu1XzOa-2iQQtIstKAplQZyo2G_rqw/viewform?embedded=true"
-   width="100%"
-   height="1100"
-   frameborder="0"
-   marginheight="0"
-   marginwidth="0"
-   loading="lazy"
-   referrerpolicy="no-referrer-when-downgrade"
-   title="CODEAI 강사등록신청 구글폼">
-  </iframe>
-  </div>
+  <!-- ======= Instructor Apply Chat Widget ======= -->
+  <style>
+    .codeai-chat-widget{
+      position:relative;
+      width:100%;
+      max-width:740px;
+      height:520px;
+      border-radius:18px;
+      box-shadow:0 14px 40px rgba(0,0,0,.12);
+      background:#fff;
+      overflow:hidden;
+      margin:0 auto;
+      border:1px solid rgba(0,0,0,.06);
+    }
+    .codeai-chat-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 12px;
+      background:linear-gradient(135deg,#1e4356,#2c6e8a);
+      color:#fff;
+    }
+    .codeai-chat-title{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .codeai-chat-title .t1{ font-weight:800; font-size:14px; line-height:1.2; }
+    .codeai-chat-title .badge{ background:rgba(255,255,255,.15); padding:3px 8px; border-radius:999px; font-size:12px; font-weight:700; }
+    .codeai-chat-actions button{
+      border:none;
+      background:rgba(255,255,255,.15);
+      color:#fff;
+      border-radius:10px;
+      padding:6px 10px;
+      cursor:pointer;
+    }
+    .codeai-chat-actions{ display:flex; gap:8px; }
+    .codeai-chat-body{ padding:14px; height:340px; overflow:auto; background:#f6fbff; }
+    .codeai-msg{ display:flex; margin:10px 0; }
+    .codeai-msg.bot{ justify-content:flex-start; }
+    .codeai-msg.user{ justify-content:flex-end; }
+    .codeai-bubble{
+      max-width:82%;
+      padding:10px 12px;
+      border-radius:14px;
+      white-space:pre-line;
+      font-size:14px;
+      line-height:1.35;
+    }
+    .codeai-msg.bot .codeai-bubble{ background:#ffffff; border:1px solid rgba(0,0,0,.06); }
+    .codeai-msg.user .codeai-bubble{ background:#1e4356; color:#fff; }
+    .codeai-quick{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      padding:10px 12px 0 12px;
+      background:#fff;
+    }
+    .codeai-quick button{
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:13px;
+      cursor:pointer;
+    }
+    .codeai-chat-input{
+      display:flex;
+      gap:8px;
+      padding:10px 12px 12px 12px;
+      background:#fff;
+      border-top:1px solid rgba(0,0,0,.06);
+    }
+    .codeai-chat-input input{
+      flex:1;
+      border:1px solid rgba(0,0,0,.14);
+      border-radius:12px;
+      padding:10px 12px;
+      font-size:14px;
+      outline:none;
+    }
+    .codeai-chat-input input:focus{
+      border-color:rgba(104,164,196,.65);
+      box-shadow:0 0 0 3px rgba(104,164,196,.18);
+    }
+    .codeai-chat-input button{
+      border:none;
+      border-radius:12px;
+      padding:0 14px;
+      background:#1e4356;
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+      min-width:74px;
+    }
+    .codeai-chat-input button:disabled{ opacity:.5; cursor:not-allowed; }
+  </style>
 
-  <div class="small text-muted mt-2">
-  * 모바일에서 하단이 잘려 보이면, 폼 새창 열기를 이용해 주세요.
+  <div aria-label="CodeAI 강사등록 신청 채팅" class="codeai-chat-widget" id="codeaiInstructorChatWidget" role="dialog">
+    <div class="codeai-chat-header">
+      <div class="codeai-chat-title">
+        <i class="bi bi-person-badge"></i>
+        <div class="t1">강사등록 신청 도우미</div>
+        <div class="badge">CodeAI</div>
+      </div>
+      <div class="codeai-chat-actions">
+        <button aria-label="대화 다시 시작" id="codeaiInstructorChatRestart" type="button"><i class="bi bi-arrow-clockwise"></i></button>
+      </div>
+    </div>
+    <div class="codeai-chat-body" id="codeaiInstructorChatBody"></div>
+    <div aria-label="빠른 선택" class="codeai-quick" id="codeaiInstructorChatQuick"></div>
+    <div class="codeai-chat-input">
+      <input autocomplete="off" id="codeaiInstructorChatInput" placeholder="여기에 입력…" type="text"/>
+      <button id="codeaiInstructorChatSend" type="button">전송</button>
+    </div>
   </div>
+  <!-- ======= End Instructor Apply Chat Widget ======= -->
  </div>
  </section><!-- End Apply Form -->
 
@@ -409,6 +507,369 @@
 
 
 <!-- ======= Instructor Apply Script ======= -->
+<script>
+(function(){
+  const API_BASE = String(window.CODEAI_API_BASE || "https://api.codeai.co.kr").replace(/\/+$/g, "");
+  const ENDPOINT = API_BASE + "/api/v1/applications/instructor";
+  const PHONE_LINK = "tel:01048623239";
+
+  const widget = document.getElementById("codeaiInstructorChatWidget");
+  const body = document.getElementById("codeaiInstructorChatBody");
+  const quick = document.getElementById("codeaiInstructorChatQuick");
+  const input = document.getElementById("codeaiInstructorChatInput");
+  const sendBtn = document.getElementById("codeaiInstructorChatSend");
+  const restartBtn = document.getElementById("codeaiInstructorChatRestart");
+
+  if(!widget || !body || !quick || !input || !sendBtn || !restartBtn) return;
+
+  let state = { step: "name", answers: {}, expecting: null };
+  const transcript = [];
+
+  function el(tag, cls, text){
+    const n = document.createElement(tag);
+    if(cls) n.className = cls;
+    if(text !== undefined && text !== null) n.textContent = text;
+    return n;
+  }
+  function scrollToBottom(){ body.scrollTop = body.scrollHeight; }
+  function addMsg(who, text){
+    const row = el("div", "codeai-msg " + who);
+    const bubble = el("div", "codeai-bubble");
+    bubble.textContent = text;
+    row.appendChild(bubble);
+    body.appendChild(row);
+    transcript.push({ who, text, t: new Date().toISOString() });
+    scrollToBottom();
+  }
+  const addBot = (t)=>addMsg("bot", t);
+  const addUser = (t)=>addMsg("user", t);
+
+  function clearQuick(){ quick.innerHTML = ""; }
+  function setQuick(options){
+    clearQuick();
+    (options || []).forEach(opt => {
+      const b = el("button", "", opt.label);
+      b.type = "button";
+      b.addEventListener("click", () => handleUser(opt.value, opt.label));
+      quick.appendChild(b);
+    });
+  }
+  function setExpecting(key, placeholder, validator){
+    state.expecting = { key, placeholder, validator };
+    input.placeholder = placeholder || "여기에 입력…";
+    setTimeout(()=>input.focus(), 0);
+  }
+  function normalizePhone(v){ return String(v || "").replace(/[^0-9]/g,""); }
+  function isValidPhone(v){ const p = normalizePhone(v); return p.length >= 10 && p.length <= 11; }
+
+  function summaryText(){
+    const a = state.answers;
+    const lines = [
+      "CodeAI 강사등록 신청 정보",
+      `- 성함: ${a.name || "-"}`,
+      `- 연락처: ${a.phone || "-"}`,
+      `- 이메일: ${a.email || "-"}`,
+      `- 희망지역: ${a.desired_region || "-"}`,
+      `- 가능시간: ${a.available || "-"}`,
+      `- 전문분야: ${a.specialization || "-"}`,
+      `- 경력/소개: ${a.experience || "-"}`,
+      `- 포트폴리오/이력 링크: ${a.portfolio_url || "-"}`,
+      `- 추가내용: ${a.note || "-"}`
+    ];
+    return lines.join("\n");
+  }
+
+  function buildPayload(){
+    const a = state.answers;
+    return {
+      source: "codeai_chat_instructor",
+      client_time: new Date().toISOString(),
+      page_url: location.href,
+      referrer: document.referrer || "",
+      name: a.name || "",
+      phone: a.phone || "",
+      email: a.email || "",
+      desired_region: a.desired_region || "",
+      available: a.available || "",
+      specialization: a.specialization || "",
+      experience: a.experience || "",
+      portfolio_url: a.portfolio_url || "",
+      note: a.note || "",
+      consent: a.consent === true,
+      transcript
+    };
+  }
+
+  async function submitToApi(){
+    const payload = buildPayload();
+    try{
+      const r = await fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const data = await r.json().catch(()=>null);
+      if(r.ok && data && data.ok) return { ok:true, id:data.id };
+      return { ok:false, reason:(data && data.code) ? data.code : "bad_response" };
+    }catch(e){
+      return { ok:false, reason:"network_error" };
+    }
+  }
+
+  async function copyToClipboard(text){
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    }catch(e){}
+    try{
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly","readonly");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    }catch(e){
+      return false;
+    }
+  }
+
+  async function doSubmit(){
+    state.step = "submitting";
+    clearQuick();
+    addBot("접수 중입니다… ⏳");
+    sendBtn.disabled = true;
+    input.disabled = true;
+
+    const res = await submitToApi();
+
+    sendBtn.disabled = false;
+    input.disabled = false;
+
+    state.step = "done";
+    if(res && res.ok){
+      addBot("신청 완료! ✅ 담당자가 확인 후 연락드릴게요.");
+      setQuick([
+        {label:"요약 복사", value:"copy"},
+        {label:"전화 걸기", value:"call"},
+        {label:"처음부터", value:"home"}
+      ]);
+    }else{
+      addBot("전송에 실패했어요. (네트워크/보안/CORS 설정일 수 있어요)\n우선 ‘요약 복사’로 내용을 저장해 주세요.");
+      setQuick([
+        {label:"요약 복사", value:"copy"},
+        {label:"다시 전송", value:"submitAgain"},
+        {label:"전화 걸기", value:"call"},
+        {label:"처음부터", value:"home"}
+      ]);
+    }
+  }
+
+  function start(){
+    body.innerHTML = "";
+    clearQuick();
+    state = { step: "name", answers: {}, expecting: null };
+    transcript.length = 0;
+    addBot("안녕하세요! 😊 CodeAI 강사등록 신청 도우미입니다.\n성함을 입력해 주세요. (예: 홍길동)");
+    setExpecting("name", "성함", (v)=>String(v||"").trim().length >= 2);
+  }
+
+  function handleUser(value, labelText){
+    if(labelText) addUser(labelText);
+
+    if(value === "home"){ start(); return; }
+
+    if(state.expecting){
+      const key = state.expecting.key;
+      const validator = state.expecting.validator;
+      const raw = value;
+      const ok = validator ? validator(raw) : true;
+      if(!ok){
+        addBot(key === "phone" ? "휴대폰 번호를 다시 확인해 주세요! (예: 010-1234-5678)" : "입력값을 다시 확인해 주세요.");
+        return;
+      }
+
+      if(key === "phone"){
+        const p = normalizePhone(raw);
+        state.answers.phone = p.replace(/^(\d{3})(\d{3,4})(\d{4})$/, "$1-$2-$3");
+      }else{
+        state.answers[key] = String(raw || "").trim();
+      }
+
+      state.expecting = null;
+      input.placeholder = "여기에 입력…";
+
+      if(state.step === "name"){
+        state.step = "phone";
+        addBot("연락처(휴대폰)를 입력해 주세요. (예: 010-1234-5678)");
+        setExpecting("phone", "휴대폰 번호", isValidPhone);
+        return;
+      }
+      if(state.step === "phone"){
+        state.step = "email";
+        addBot("이메일을 입력해 주세요. (예: example@gmail.com)");
+        setExpecting("email", "이메일", (v)=>String(v||"").includes("@") && String(v||"").trim().length >= 5);
+        return;
+      }
+      if(state.step === "email"){
+        state.step = "desired_region";
+        addBot("희망 근무 지역을 선택하거나 입력해 주세요.");
+        setQuick([
+          {label:"용인/수지", value:"용인/수지"},
+          {label:"분당", value:"분당"},
+          {label:"수원/광교", value:"수원/광교"},
+          {label:"온라인(Zoom)", value:"온라인(Zoom)"},
+          {label:"직접 입력", value:"custom_region"}
+        ]);
+        return;
+      }
+      if(state.step === "available"){
+        state.step = "specialization";
+        addBot("전문분야를 선택해 주세요.");
+        setQuick([
+          {label:"파이썬", value:"파이썬"},
+          {label:"웹(HTML/CSS/JS)", value:"웹(HTML/CSS/JS)"},
+          {label:"AI 활용/업무자동화", value:"AI 활용/업무자동화"},
+          {label:"데이터/엑셀", value:"데이터/엑셀"},
+          {label:"알고리즘/대회", value:"알고리즘/대회"},
+          {label:"기타(직접 입력)", value:"custom_spec"}
+        ]);
+        return;
+      }
+      if(state.step === "experience"){
+        state.step = "portfolio_url";
+        addBot("포트폴리오/이력 링크(GitHub/Notion/Drive 등)를 입력해 주세요. 없으면 ‘없음’이라고 입력해 주세요.");
+        setExpecting("portfolio_url", "링크(선택)", (v)=>String(v||"").trim().length > 0);
+        return;
+      }
+      if(state.step === "portfolio_url"){
+        state.step = "note";
+        addBot("추가로 남길 내용(선호 수업형태, 학생대상, 급여/시간 등)이 있으면 입력해 주세요. 없으면 ‘없음’이라고 적어주세요.");
+        setExpecting("note", "추가내용(선택)", (v)=>String(v||"").trim().length > 0);
+        return;
+      }
+      if(state.step === "note"){
+        state.step = "consent";
+        clearQuick();
+        addBot("마지막으로 개인정보 수집·이용에 동의해 주세요.\n(검토/연락을 위해 성함/연락처/이메일을 저장합니다)");
+        setQuick([
+          {label:"동의합니다", value:"consent_yes"},
+          {label:"동의하지 않음", value:"consent_no"}
+        ]);
+        return;
+      }
+    }
+
+    if(state.step === "desired_region"){
+      if(value === "custom_region"){
+        clearQuick();
+        addBot("희망 근무 지역을 입력해 주세요.");
+        setExpecting("desired_region", "희망 지역", (v)=>String(v||"").trim().length > 0);
+        return;
+      }
+      state.answers.desired_region = value;
+      state.step = "available";
+      clearQuick();
+      addBot("가능 요일/시간대를 입력해 주세요. (예: 평일 저녁 7~10, 토 오전)");
+      setExpecting("available", "가능 요일/시간", (v)=>String(v||"").trim().length > 0);
+      return;
+    }
+
+    if(state.step === "specialization"){
+      if(value === "custom_spec"){
+        clearQuick();
+        addBot("전문분야를 입력해 주세요. (예: Scratch, Unity, Java, 앱개발 등)");
+        setExpecting("specialization", "전문분야", (v)=>String(v||"").trim().length > 0);
+        return;
+      }
+      state.answers.specialization = value;
+      state.step = "experience";
+      clearQuick();
+      addBot("간단한 경력/자기소개를 입력해 주세요. (예: 지도경력, 전공, 수업경험 등)");
+      setExpecting("experience", "경력/소개", (v)=>String(v||"").trim().length >= 5);
+      return;
+    }
+
+    if(state.step === "consent"){
+      if(value === "consent_yes"){
+        state.answers.consent = true;
+        state.step = "confirm";
+        clearQuick();
+        addBot(`좋아요! 아래 내용으로 접수할까요?\n\n${summaryText()}`);
+        setQuick([
+          {label:"신청완료하기", value:"submitFinal"},
+          {label:"처음부터", value:"home"}
+        ]);
+        return;
+      }
+      if(value === "consent_no"){
+        state.answers.consent = false;
+        state.step = "done";
+        clearQuick();
+        addBot("동의가 없으면 온라인 접수 저장이 어렵습니다.\n대신 전화/카톡으로 안내드릴게요.");
+        setQuick([
+          {label:"전화 걸기", value:"call"},
+          {label:"요약 복사", value:"copy"},
+          {label:"처음부터", value:"home"}
+        ]);
+        return;
+      }
+    }
+
+    if(state.step === "confirm"){
+      if(value === "submitFinal"){
+        if(state.answers.consent !== true){
+          addBot("개인정보 수집·이용 동의가 필요합니다.");
+          state.step = "consent";
+          setQuick([
+            {label:"동의합니다", value:"consent_yes"},
+            {label:"동의하지 않음", value:"consent_no"}
+          ]);
+          return;
+        }
+        doSubmit();
+        return;
+      }
+    }
+
+    if(state.step === "done"){
+      if(value === "copy"){
+        Promise.resolve(copyToClipboard(summaryText())).then(success=>{
+          addBot(success ? "요약을 복사했어요!" : "복사가 안되면 아래 요약을 직접 드래그해서 복사해 주세요.");
+          addBot(summaryText());
+        });
+        return;
+      }
+      if(value === "submitAgain"){ doSubmit(); return; }
+      if(value === "call"){ window.location.href = PHONE_LINK; return; }
+    }
+
+    // 기본 입력 처리(선택 버튼 안내)
+    if(!state.expecting){
+      addBot("입력/선택으로 진행해 주세요 😊");
+    }
+  }
+
+  function onSend(){
+    const v = (input.value || "").trim();
+    if(!v) return;
+    input.value = "";
+    addUser(v);
+    handleUser(v, null);
+  }
+
+  sendBtn.addEventListener("click", onSend);
+  input.addEventListener("keydown", (e) => { if(e.key === "Enter"){ e.preventDefault(); onSend(); } });
+  restartBtn.addEventListener("click", start);
+
+  start();
+})();
+</script>
 
 
 </main><!-- End #main -->
@@ -440,7 +901,15 @@
     경기도 용인시 <br/>
     진산로 222<br/><br/>
 <strong>Phone:</strong> 010.4862.3239<br/>
-<strong>Email:</strong> codeai.lab@gmail.com<br/></p>
+<strong>Email:</strong> codeai.lab@gmail.com<br/><br/><br/>
+<span class="footer-business">
+<strong>상호:</strong> 플로우앤코<br/>
+<strong>대표:</strong> 김지연<br/>
+<strong>사업자등록번호:</strong> 646-12-02850<br/>
+<strong>주소:</strong> 경기도 용인시 기흥구 진산로 222, A-1703호(보정동, 죽전신세계쉐덴)<br/>
+<strong>업태/종목:</strong> 도매 및 소매업 / 전자상거래 소매업
+</span>
+</p>
 </div>
 </div>
 </div>

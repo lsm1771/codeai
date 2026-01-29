@@ -2331,6 +2331,19 @@ section {
   line-height: 26px;
 }
 
+#footer .footer-business {
+  display: block;
+  margin-top: 10px;
+  font-size: 12.5px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+#footer .footer-business strong {
+  color: #a2cce3;
+  font-weight: 700;
+}
+
 #footer .copyright {
   text-align: center;
   padding-top: 30px;
